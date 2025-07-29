@@ -1,3 +1,50 @@
 body {
-    background-color: blueviolet;
+    background-color: brown;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    margin-top: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: blanchedalmond;
+    color: brown;
+    font-size: 16px;
+}
+
+.menu-btn {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.selected-section {
+    background-color: rgb(103, 41, 41);
+    color: white;
+}
+
+#contents {
+    display: flex;
+    justify-content: center;
+}
+
+#contents :nth-child(1) {
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+#contents :nth-child(1) :nth-child(1) {
+    font-size: 50px;
 }
