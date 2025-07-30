@@ -1,11 +1,11 @@
 import './styles.css';
-import { homeBtn, menuBtn, aboutBtn } from './buttons';
-import { homeBtnEventListener, aboutBtnEventListener } from './functions';
-import { homeSection } from "./section-content";
-import { eventFunction } from "./event function";
+import { homeBtn, menuBtn, aboutBtn } from './scripts/buttons';
+import { homeBtnEventListener, menuBtnEventListener, aboutBtnEventListener } from './scripts/functions';
+import { homeSection } from "./scripts/section-content";
+import { changeContent } from "./scripts/event function";
 
-eventFunction(homeBtn, homeSection);
+changeContent(homeBtn, homeSection);
 
 homeBtn.addEventListener('click', homeBtnEventListener);
-// menuBtn.addEventListener('click', menuBtnEventListener);
+menuBtn.addEventListener('click', menuBtnEventListener);
 aboutBtn.addEventListener('click', aboutBtnEventListener);

@@ -48,3 +48,7 @@ button {
 #contents :nth-child(1) :nth-child(1) {
     font-size: 50px;
 }
+
+#contents :nth-child(1) :nth-child(2) {
+    width: 700px;
+}
