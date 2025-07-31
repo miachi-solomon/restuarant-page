@@ -1,15 +1,16 @@
-import { homeSection, aboutSection, menuSection } from "./section-content";
-import { changeContent, changeMenuContent } from "./event function";
+import { homeSection, menuSection, aboutSection } from "./section-content";
+import { changeContent } from "./event function";
 import { homeBtn, menuBtn, aboutBtn} from './buttons';
 
-export function homeBtnEventListener () {
-    changeContent(homeBtn, homeSection);
-}
+export const buttons = [homeBtn, menuBtn, aboutBtn];
+const buttonSections = [homeSection, menuSection, aboutSection];
 
-export function menuBtnEventListener () {
-    changeMenuContent(menuBtn, menuSection);
-}
+export function btnEventListener (button) {
+    const btnIndex = buttons.indexOf(button.target);
 
-export function aboutBtnEventListener () {
-    changeContent(aboutBtn, aboutSection);
+    changeContent(button.target, buttonSections[btnIndex]);
+
+    buttons.forEach(btn => btn.classList.remove('selected-section'));
+
+    button.target.classList.add('selected-section');
 }

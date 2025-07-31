@@ -1,25 +1,31 @@
 import './menu.css';
 import { menuItems } from "./menu-products";
+import { contentsDiv } from '../event function';
 
 export function generateMenuHTMl () {
-    const menuContainer = document.createElement('div');
-    menuContainer.classList.add('menu-container');
-
+    let menuHTML = '';
     menuItems.forEach((item) => {
-        const menuItem = document.createElement('div');
-        const itemImageDiv = document.createElement('div');
-        const itemPrice = document.createElement('div');
-        const itemImage = document.createElement('img');
+        // const menuItem = document.createElement('div');
+        // const itemImageDiv = document.createElement('div');
+        // const itemPrice = document.createElement('p');
+        // const itemImage = document.createElement('img');
 
-        menuItem.classList.add('menu-item');
+        // menuItem.classList.add('menu-item');
+        // itemPrice.classList.add('item-price');
 
-        itemImage.src = item.image;
+        // itemImage.src = item.image;
 
-        menuItem.append(itemImage, itemPrice);
-        menuContainer.appendChild(menuItem);
+        // menuItem.append(itemImage, itemPrice);
 
-        itemImageDiv.innerHTML = itemImage;
-        itemPrice.textContent = item.price;
+        // itemImageDiv.innerHTML = itemImage;
+        // itemPrice.innerHTML = item.price;
+        menuHTML += `
+            <div class="menu-item">
+                <div class="item-image-div">
+                    <img src="${item.image}">
+                </div>
+                <p class="item-price">${item.price}</p>
+            </div>`;
     });
-    return menuContainer.outerHTML;
+    return menuHTML;
 }

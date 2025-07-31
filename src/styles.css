@@ -37,18 +37,18 @@ button {
 #contents {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 #contents :nth-child(1) {
-    margin-top: 50px;
     text-align: center;
     color: white;
 }
 
-#contents :nth-child(1) :nth-child(1) {
+#contents h1 {
     font-size: 50px;
 }
 
-#contents :nth-child(1) :nth-child(2) {
-    width: 700px;
+.about-section-text, .home-section-text {
+    width: 500px;
 }

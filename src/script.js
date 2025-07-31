@@ -1,11 +1,12 @@
 import './styles.css';
-import { homeBtn, menuBtn, aboutBtn } from './scripts/buttons';
-import { homeBtnEventListener, menuBtnEventListener, aboutBtnEventListener } from './scripts/functions';
+import { homeBtn } from './scripts/buttons';
+import { btnEventListener } from './scripts/functions';
 import { homeSection } from "./scripts/section-content";
 import { changeContent } from "./scripts/event function";
+import { buttons } from './scripts/functions';
 
 changeContent(homeBtn, homeSection);
 
-homeBtn.addEventListener('click', homeBtnEventListener);
-menuBtn.addEventListener('click', menuBtnEventListener);
-aboutBtn.addEventListener('click', aboutBtnEventListener);
+buttons.forEach(button => {
+    button.addEventListener('click', btnEventListener);
+});
